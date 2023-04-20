@@ -1,0 +1,84 @@
+/*Basics*/
+@import url("fonts.css");
+
+html{
+    font-family: 'Roboto',Arial, sans-serif;
+    font-size: 20px;
+    font-weight:normal;
+    font-style: normal;
+    color: #000000;
+    line-height: 1.2;
+}
+
+body {
+    max-width: 940px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+/*Titles*/
+.logo-title, .bio-title, .strengths-title {
+    font-family: 'Play Fair Display', serif;
+    font-size: 4.3rem;
+    font-weight: 500;
+}
+
+.logo-subtitle {
+    font-weight: 500;
+}
+
+.section-name {
+    font-weight: 700;
+}
+
+
+/*Biography Section*/
+    /*Lists*/
+.bio-skills {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.bio-skills ul, .testimonials nav ul  {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.bio-skills li, .testimonials nav li {
+    display: inline-block;
+}
+
+.bio-quote {
+    margin: 20px 0;
+    font-family: 'Bitter', 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
+}
+
+
+/*Designers Section*/
+.designer-card p {
+    font-size: 0.8rem;
+}
+
+
+/*Testimonials Section*/
+.testimonials nav a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.testimonials-quote {
+    margin: 20px 0;
+    font-family: 'Bitter', 'Times New Roman', Times, serif;
+    font-size: 1.6rem;
+}
+
+
+/*Strengths Section*/
+.strengths ul {
+    list-style-type: none;
+    font-family: 'Bitter', 'Times New Roman', Times, serif;
+    font-size: 1.7rem;
+}
