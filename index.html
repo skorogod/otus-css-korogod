@@ -3,52 +3,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/css/style.css">
   <title>Mod Studio</title>
 </head>
 <body>
   <!--Header with navigation and logo-->
   <header class="page-header">
-    <!--Naviagetion-->
+    <!--Navigation-->
     <nav>
     </nav>
-    <!--logo-->
-    <div class="logo">
-      <h1 class="title">Mod Studio</h1>
-      <h2 class="subtitle">Modern Web Studio</h2>
-    </div>
   </header>
   <main>
+    <!--Hero Section-->
+    <section class="hero">
+      <div class="hero-box">
+        <h1 class="logo-title">Mod Studio</h1>
+        <h2 class="logo-subtitle">Modern Web Studio</h2>
+      </div>
+    </section>
     <!--Biography Section-->
-    <section>
-      <h2 class="section-title">Biography</h2>
+    <section class="bio">
+      <h2 class="section-name">Biography</h2>
       <article>
         <div>
           <img src="img/biography-img.jpg" alt="">
         </div>
-        <h2>Katya Mills</h2>
-        <div>
+        <h2 class="bio-title">Katya Mills</h2>
+        <div class="bio-skills">
           <h3>Art Director</h3>
           <ul>
-            <li>Scenography</li>
-            <li>Styling</li>
-            <li>Creative Photography</li>
+            <li>Scenography</li> /
+            <li>Styling</li> /
+            <li>Creative Photography</li> /
             <li>Design</li>
           </ul>
         </div>
         <div>
           <img src="img/Biography-rectangle.svg" alt="">
         </div>
-        <blocquote>
+        <blockquote class="bio-quote">
           “The more I deal with the work as something that is my own, 
           as something that is personal, the more successful it is.”
-        </blocquote>
+        </blockquote>
       </article>
     </section>
     <!--Designers Section-->
-    <section>
-      <h2 class="section-title">Designers</h2>
-      <article>
+    <section class="designers">
+      <h2 class="section-name">Designers</h2>
+      <article class="designer-card">
         <div>
           <img src="img/Designers-Jess-Wonder.jpg" alt="">
         </div>
@@ -58,7 +70,7 @@
           <strong>Skills/</strong> Design Strategy / Marketing
         </p>
       </article>
-      <article>
+      <article class="designer-card">
         <div>
           <img src="img/Designers-Kameron-Clein.jpg" alt="">
         </div>
@@ -68,7 +80,7 @@
           <strong>Skills/</strong> Design Strategy / Marketing
         </p>
       </article>
-      <article>
+      <article class="designer-card">
         <div>
           <img src="img/Designers-Louisse-Red.jpg" alt="">
         </div>
@@ -80,14 +92,14 @@
       </article>
     </section>
     <!--Testiomonials Section-->
-    <section>
+    <section class="testimonials">
       <header>
-        <h2>Testimonials</h2>
+        <h2 class="section-name">Testimonials</h2>
         <nav>
           <ul>
-            <li><a href="#">Creativity<br>www.whitepapers.com</a></li>
-            <li><a href="#">Creativity<br>www.whitepapers.com</a></li>
-            <li><a href="#">Website<br>www.whitepapers.com</a></li>
+            <li><a href="#"><strong>Creativity</strong><br>www.whitepapers.com</a></li>
+            <li><a href="#"><strong>Creativity</strong><br>www.whitepapers.com</a></li>
+            <li><a href="#"><strong>Website</strong><br>www.whitepapers.com</a></li>
           </ul>
         </nav>
         <div>
@@ -95,18 +107,18 @@
         </div>
       </header>
       <article>
-        <p>
+        <blockquote class="testimonials-quote">
           I just really want to do good work and work with some great people, 
           people who challenge me.
-        <p>
+        </blockquote>
         <div>
           <img src="img/Testimonials-2.jpg" alt="">
         </div>
       </article>
     </section>
     <!--Strong points Section-->
-    <section>
-      <h2>Strong points</h2>
+    <section class="strengths">
+      <h2 class="section-name">Strong points</h2>
       <div>
         <img src="img/Strong-points-1.jpg" alt="">
       </div>
@@ -114,7 +126,7 @@
         <img src="img/Strong-points-2.jpg" alt="">
       </div>
       <article>
-        <h2>
+        <h2 class="strengths-title">
           Strengths
         </h2>
         <ul>
