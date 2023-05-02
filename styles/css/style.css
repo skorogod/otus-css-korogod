@@ -1,5 +1,9 @@
 /*Basics*/
 @import url("fonts.css");
+* {
+    box-sizing: border-box;
+}
+
 
 html{
     font-family: 'Roboto',Arial, sans-serif;
@@ -10,21 +14,49 @@ html{
     line-height: 1.2;
 }
 
-body {
-    max-width: 940px;
+.wrapper {
     margin: 0 auto;
-    padding: 0 20px;
+    text-align: center;
+    max-width: 1065px;
 }
 
+.page-header {
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero {
+    background-image: url("../../img/logo-background.jpg");
+    width: 74%;
+    height: 630px;
+    position: relative;
+}
+
+.hero-box {
+    background-color: #FFFFFF;
+    width: 56%;
+    height: 360px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10.3% 1.9%;
+}
 
 /*Titles*/
-.logo-title, .bio-title, .strengths-title {
+.hero-title, .hero-description {
+    margin: 0;
+}
+
+.hero-title, .bio-title, .strengths-title {
     font-family: 'Play Fair Display', serif;
     font-size: 4.3rem;
     font-weight: 500;
 }
 
-.logo-subtitle {
+.hero-description {
     font-weight: 500;
 }
 
