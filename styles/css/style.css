@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 
@@ -57,35 +58,81 @@ html{
     font-weight: 500;
 }
 
-.section-name {
+.bio-header, .section-name {
     font-weight: 700;
+    font-size: 1rem;
 }
 
 
 /*Biography Section*/
     /*Lists*/
+.bio {
+    margin-top: 135px;
+    max-width: 1175px;
+    height: 840px;
+    display: flex;
+    align-items: flex-start;
+}
+
+.bio-header {
+    writing-mode: vertical-rl;
+    transform:rotate(-180deg);
+    margin-left: 1.65rem;
+}
+
+.bio-img-container {
+    order: -1
+}
+
+.bio-img {
+    max-width: 553px;
+}
+
+.bio-info {
+    display: flex;
+    flex-flow: column;
+    align-self: center;
+    margin-left: 4.55rem;
+}
+
 .bio-skills {
     font-size: 0.9rem;
     font-weight: 500;
+    margin-top: 1.25rem;
 }
 
-.bio-skills ul, .testimonials nav ul  {
-    padding-left: 0;
+.bio-skills-header {
+    font-weight: 500;
+    font-size: inherit;
+}
+
+.bio-skills-list {
     list-style-type: none;
 }
 
+.list-item {
+    display: inline-block;
+}
 .bio-skills li, .testimonials nav li {
     display: inline-block;
 }
 
+.bio-rectangle {
+    margin-top: 3.45rem;
+}
+
 .bio-quote {
-    margin: 20px 0;
+    margin-top: 0.85rem;
     font-family: 'Bitter', 'Times New Roman', Times, serif;
     font-size: 1.3rem;
 }
 
 
 /*Designers Section*/
+.designers {
+    margin-top: 169px;
+}
+
 .designer-card p {
     font-size: 0.8rem;
 }
