@@ -2,6 +2,7 @@
 @import url("fonts.css");
 * {
     box-sizing: border-box;
+    margin: 0;
 }
 
 
@@ -16,8 +17,6 @@ html{
 
 .wrapper {
     margin: 0 auto;
-    text-align: center;
-    max-width: 1065px;
 }
 
 .page-header {
@@ -25,13 +24,15 @@ html{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .hero {
+    max-width: 1065px;
     background-image: url("../../img/logo-background.jpg");
-    width: 74%;
     height: 630px;
     position: relative;
+    text-align: center;
 }
 
 .hero-box {
@@ -46,10 +47,6 @@ html{
 }
 
 /*Titles*/
-.hero-title, .hero-description {
-    margin: 0;
-}
-
 .hero-title, .bio-title, .strengths-title {
     font-family: 'Play Fair Display', serif;
     font-size: 4.3rem;
