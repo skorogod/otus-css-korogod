@@ -49,13 +49,20 @@ html{
 
 /*Titles*/
 .hero-title, .bio-title, .strengths-title {
-    font-family: 'Play Fair Display', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 4.3rem;
     font-weight: 500;
 }
 
+.bio-title {
+    line-height: 1.33em;
+    max-width: 230px;
+}
+
 .hero-description {
     font-weight: 500;
+    font-size: inherit;
+    margin-top: 14px;
 }
 
 .bio-header, .section-name {
@@ -71,7 +78,7 @@ html{
     max-width: 1175px;
     height: 840px;
     display: flex;
-    align-items: flex-start;
+    align-items: start;
 }
 
 .bio-header {
@@ -81,7 +88,7 @@ html{
 }
 
 .bio-img-container {
-    order: -1
+    order: -1;
 }
 
 .bio-img {
@@ -113,18 +120,18 @@ html{
 .list-item {
     display: inline-block;
 }
-.bio-skills li, .testimonials nav li {
-    display: inline-block;
-}
 
 .bio-rectangle {
-    margin-top: 3.45rem;
+    margin-top: 3.25rem;
+    height: 4px;
+    align-self: flex-start;
 }
 
 .bio-quote {
     margin-top: 0.85rem;
     font-family: 'Bitter', 'Times New Roman', Times, serif;
     font-size: 1.3rem;
+    max-width: 449px;
 }
 
 
