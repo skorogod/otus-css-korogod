@@ -78,13 +78,14 @@ html{
     max-width: 1175px;
     height: 840px;
     display: flex;
-    align-items: start;
+    column-gap: 1.65rem;
+    
 }
 
 .bio-header {
     writing-mode: vertical-rl;
     transform:rotate(-180deg);
-    margin-left: 1.65rem;
+    align-self: flex-start;
 }
 
 .bio-img-container {
@@ -96,11 +97,17 @@ html{
     max-width: 100%;
 }
 
+.bio-info-container {
+    flex-basis: 622px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .bio-info {
     display: flex;
     flex-flow: column;
-    align-self: center;
-    margin-left: 4.55rem;
+    justify-content: center;
+    max-width: 475px;
 }
 
 .bio-skills {
