@@ -90,16 +90,62 @@ html{
     font-size: 0.8rem;
 }
 
+/*Testimonials Section */
+.testimonials {
+    max-width: 1440px;
+    margin-top: 258px; 
+    padding: 0 132px;
+    display: grid;
+    grid-template-rows: 1fr 757px;
+    row-gap: 33px;
+}
 
-/*Testimonials Section*/
-.testimonials nav a {
+.tmls-title {
+    font-size: 1rem;
+}
+
+.tmls-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.tmls-header {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    column-gap: 1.15rem;
+}
+
+.tmls-nav-list {
+    display: grid;
+    gap: 2.25rem;
+    align-items: center;
+}
+
+.tmls-nav-item {
+    writing-mode: vertical-rl;
+    transform: rotate(-180deg);
+    justify-self: start;
+    line-height: 1.17;
+}
+
+.tmls-article {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.nav-link {
     color: #000000;
     text-decoration: none;
     font-size: 0.8rem;
 }
 
 .testimonials-quote {
-    margin: 20px 0;
+    max-width: 37.5%;
     font-family: 'Bitter', 'Times New Roman', Times, serif;
     font-size: 1.6rem;
 }
