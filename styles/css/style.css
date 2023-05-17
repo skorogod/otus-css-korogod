@@ -89,10 +89,11 @@ html{
 
 .bio-img-container {
     order: -1;
+    max-width: 553px;
 }
 
 .bio-img {
-    max-width: 553px;
+    max-width: 100%;
 }
 
 .bio-info {
