@@ -97,7 +97,7 @@ html{
     padding: 0 132px;
     display: grid;
     grid-template-rows: 1fr 757px;
-    row-gap: 33px;
+    
 }
 
 .tmls-title {
@@ -114,6 +114,10 @@ html{
     grid-auto-flow: column;
     align-items: center;
     column-gap: 1.15rem;
+}
+
+.tmls-header-img {
+    max-width: 100%;
 }
 
 .tmls-nav-list {
@@ -137,6 +141,9 @@ html{
     text-align: center;
 }
 
+.tmls-article-img {
+    max-width: 100%;
+}
 
 .nav-link {
     color: #000000;
