@@ -3,6 +3,7 @@
 * {
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 
 
@@ -48,44 +49,105 @@ html{
 
 /*Titles*/
 .hero-title, .bio-title, .strengths-title {
-    font-family: 'Play Fair Display', serif;
+    font-family: 'Playfair Display', serif;
     font-size: 4.3rem;
     font-weight: 500;
 }
 
-.hero-description {
-    font-weight: 500;
+.bio-title {
+    line-height: 1.33em;
+    max-width: 230px;
 }
 
-.section-name {
+.hero-description {
+    font-weight: 500;
+    font-size: inherit;
+    margin-top: 14px;
+}
+
+.bio-header, .section-name {
     font-weight: 700;
+    font-size: 1rem;
 }
 
 
 /*Biography Section*/
     /*Lists*/
+.bio {
+    margin-top: 135px;
+    max-width: 1175px;
+    height: 840px;
+    display: flex;
+    column-gap: 1.65rem;
+    
+}
+
+.bio-header {
+    writing-mode: vertical-rl;
+    transform:rotate(-180deg);
+    align-self: flex-start;
+}
+
+.bio-img-container {
+    order: -1;
+    max-width: 553px;
+}
+
+.bio-img {
+    max-width: 100%;
+}
+
+.bio-info-container {
+    flex-basis: 622px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bio-info {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    max-width: 475px;
+}
+
 .bio-skills {
     font-size: 0.9rem;
     font-weight: 500;
+    margin-top: 1.25rem;
 }
 
-.bio-skills ul, .testimonials nav ul  {
-    padding-left: 0;
+.bio-skills-header {
+    font-weight: 500;
+    font-size: inherit;
+}
+
+.bio-skills-list {
     list-style-type: none;
 }
 
-.bio-skills li, .testimonials nav li {
+.list-item {
     display: inline-block;
 }
 
+.bio-rectangle {
+    margin-top: 3.25rem;
+    height: 4px;
+    align-self: flex-start;
+}
+
 .bio-quote {
-    margin: 20px 0;
+    margin-top: 0.85rem;
     font-family: 'Bitter', 'Times New Roman', Times, serif;
     font-size: 1.3rem;
+    max-width: 449px;
 }
 
 
 /*Designers Section*/
+.designers {
+    margin-top: 169px;
+}
+
 .designer-card p {
     font-size: 0.8rem;
 }
