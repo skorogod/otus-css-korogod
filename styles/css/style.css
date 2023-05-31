@@ -163,55 +163,51 @@ html{
     
 }
 
-.tmls-title {
+.testimonials-title {
     font-size: 1rem;
 }
 
-.tmls-content {
+.testimonials-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-.tmls-header {
+.testimonials-navigation {
     display: grid;
     grid-auto-flow: column;
     align-items: center;
     column-gap: 1.15rem;
+    overflow: hidden;
 }
 
-.tmls-header-img {
-    max-width: 100%;
-}
 
-.tmls-nav-list {
+
+.testimonials-nav-list {
     display: grid;
     gap: 2.25rem;
     align-items: center;
 }
 
-.tmls-nav-item {
+.testimonials-nav-item {
     writing-mode: vertical-rl;
     transform: rotate(-180deg);
     justify-self: start;
     line-height: 1.17;
 }
 
-.tmls-article {
+.testimonials-article {
     display: grid;
     grid-template-rows: 1fr 1fr;
     place-items: center;
     text-align: center;
 }
 
-.tmls-quote {
+.testimonials-quote {
     max-width: 221px;
     font-family: 'Bitter', 'Times New Roman', Times, serif;
     font-size: 1.6rem;
 }
 
-.tmls-article-img {
-    max-width: 100%;
-}
 
 .nav-link {
     color: #000000;
