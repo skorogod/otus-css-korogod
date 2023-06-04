@@ -48,7 +48,7 @@ html{
 }
 
 /*Titles*/
-.hero-title, .bio-title, .strengths-title {
+.hero-title, .bio-title, .strengths-list-title {
     font-family: 'Playfair Display', serif;
     font-size: 4.3rem;
     font-weight: 500;
@@ -156,7 +156,6 @@ html{
 .testimonials {
     max-width: 1179px;
     margin-top: 258px; 
-    margin-bottom: 300px;
     display: grid;
     grid-template-rows: 1fr 760px;
     row-gap: 33px;
@@ -179,8 +178,6 @@ html{
     column-gap: 1.15rem;
     overflow: hidden;
 }
-
-
 
 .testimonials-nav-list {
     display: grid;
@@ -217,8 +214,87 @@ html{
 
 
 /*Strengths Section*/
-.strengths ul {
+.strengths {
+    margin-top: 134px;
+    margin-bottom: 161px;
+    display: grid;
+    justify-content: center;
+    gap: 17px calc(1.7% );
+    grid-template-rows: 140px 1fr;
+    grid-template-columns: 350px 350px 395px 350px;
+    overflow-x: hidden;
+}
+
+.strengths-header {
+    -webkit-writing-mode: sideways-lr;
+        -ms-writing-mode: sideways-lr;
+            writing-mode: sideways-lr;
+    grid-column: 2/3;
+    justify-self: start;
+}
+
+.img-1, .img-2, .img-3, .strengths-list {
+    grid-row: 2;
+}
+
+.strengths-article {
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+
+.strengths-list {
     list-style-type: none;
     font-family: 'Bitter', 'Times New Roman', Times, serif;
     font-size: 1.7rem;
+    padding-left: calc(12% + 10px);
+}
+
+
+@supports not (display: grid) {
+    .strengths {
+        margin-top: 134px;
+        margin-bottom: 161px;
+        display: flex;
+        flex-flow: column wrap;
+        height: 665px;
+        gap: 17px calc(1.7% + 10px);
+        justify-content:end;
+        align-items:center;
+        overflow-x: hidden ;
+        align-content: center;
+    }
+    
+    .img-1 {
+        order: 0;
+        margin-top: 140px;
+        align-self: flex-end;
+    }
+    
+    .strengths-header {
+        order: 1;
+        -webkit-writing-mode: sideways-lr;
+            -ms-writing-mode: sideways-lr;
+                writing-mode: sideways-lr;
+        align-self: flex-start;
+    }
+    
+    .img-2 {
+        order: 1;
+    }
+    
+    .strengths-list-title {
+        order: 2;
+    }
+    
+    .strengths-list {
+        order: 3;
+        list-style-type: none;
+        font-family: 'Bitter', 'Times New Roman', Times, serif;
+        font-size: 1.7rem;
+        margin-bottom: 30px;
+    }
+    
+    .img-3 {
+        order: 4;
+    }
 }
