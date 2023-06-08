@@ -1,11 +1,13 @@
 /*Basics*/
 @import url("fonts.css");
+
 * {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+        -ms-box-sizimg: border-box;
+            box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
-
 
 html{
     font-family: 'Roboto',Arial, sans-serif;
@@ -120,6 +122,10 @@ html{
     font-size: inherit;
 }
 
+.list {
+    list-style-type: none;
+}
+
 .bio-skills-list {
     list-style-type: none;
 }
@@ -128,10 +134,23 @@ html{
     display: inline-block;
 }
 
+.list-item::after {
+    content: ' /';
+}
+
+.list-item:last-child::after {
+    content: '';
+}
+
 .bio-rectangle {
     margin-top: 3.25rem;
     height: 4px;
     align-self: flex-start;
+}
+
+.bio-quote::before{
+    content: url("../../img/Biography-rectangle.svg");
+    display: block;
 }
 
 .bio-quote {
@@ -147,42 +166,61 @@ html{
     margin-top: 169px;
     margin-bottom: 200px;
     max-width: 1337px;
-    display: grid;
-    grid-auto-flow: dense;
-    grid-template-rows: 100px 1fr;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: space-between;
-}
-
-.designer-card {
-    display: flex;
-    flex-direction: column;
-    align-items:first baseline;
+    height: 619px;
+    position: relative;
 }
 
 .designers-header {
-    grid-column: 3/4;
+    background-color: #FFFFFF;
+    position: absolute;
+    display: inline-block;
+    padding: 5px;
+    top: -5px;
+    left: 870px;
+    transform: rotate(-90deg);
+    transform-origin: top right;
+    z-index: 1;
+}
+
+.designers-list {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    overflow-x: auto;
+    margin-bottom: 0
+   
+}
+
+.designers-list-item {
+    flex-basis: 320px;
+    flex-shrink: 0;
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    align-items: end;
-    writing-mode:sideways-lr;
 }
 
-.card-1 {
-    grid-column: 1/3;
-    grid-row: 1/2;
+.designer-card {
+    flex-basis: 520px;
+    display: flex;
+    flex-direction: column;
 }
 
-
-.card-2 {
-    grid-row: 2;
-    grid-column: 3/4;
+.sizer{
+    flex-basis: auto;
 }
 
-.card-3 {
-    grid-row: 2;
-    grid-column: 4;
+.sizer .designer-card {
+    flex-basis: auto;
+}
+
+.sizer .card-img {
+    height: 538px;
+}
+
+.sizer .card-info {
+    align-self: flex-end;
 }
 
 .card-info {
@@ -191,13 +229,12 @@ html{
     margin-top: 1.2rem;
 }
 
-.test {
-    padding-left: 50%;
+.card-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.card-img {
-    width: 100%;
-}
 
 /*Testimonials Section*/
 .testimonials nav a {
