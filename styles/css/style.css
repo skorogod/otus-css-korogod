@@ -215,25 +215,27 @@ html{
 
 /*Strengths Section*/
 .strengths {
+    max-width: 1686px;
     margin-top: 134px;
     margin-bottom: 161px;
     display: grid;
-    justify-content: center;
-    gap: 17px calc(1.7% );
+    justify-content: flex-start;
+    gap: 17px calc(1.7% + 10px);
     grid-template-rows: 140px 1fr;
     grid-template-columns: 350px 350px 395px 350px;
     overflow-x: hidden;
 }
 
 .strengths-header {
-    -webkit-writing-mode: sideways-lr;
-        -ms-writing-mode: sideways-lr;
-            writing-mode: sideways-lr;
+    display: inline-block;
     grid-column: 2/3;
     justify-self: start;
+    align-self: end;
+    transform: rotate(-90deg) translateX(-20px);
+    transform-origin: left top;
 }
 
-.img-1, .img-2, .img-3, .strengths-list {
+.strengths-img-1, .strengths-img-2, .strengths-img-3, .strengths-list {
     grid-row: 2;
 }
 
@@ -246,7 +248,7 @@ html{
     list-style-type: none;
     font-family: 'Bitter', 'Times New Roman', Times, serif;
     font-size: 1.7rem;
-    padding-left: calc(12% + 10px);
+    padding-left: 21%;
 }
 
 
@@ -260,11 +262,10 @@ html{
         gap: 17px calc(1.7% + 10px);
         justify-content:end;
         align-items:center;
-        overflow-x: hidden ;
-        align-content: center;
+        align-content: flex-start;
     }
     
-    .img-1 {
+    .strengths-img-1 {
         order: 0;
         margin-top: 140px;
         align-self: flex-end;
@@ -272,13 +273,12 @@ html{
     
     .strengths-header {
         order: 1;
-        -webkit-writing-mode: sideways-lr;
-            -ms-writing-mode: sideways-lr;
-                writing-mode: sideways-lr;
         align-self: flex-start;
+        transform: rotate(-90deg) translateX(-25px);
+        transform-origin: top left;
     }
     
-    .img-2 {
+    .strengths-img-2 {
         order: 1;
     }
     
@@ -292,9 +292,10 @@ html{
         font-family: 'Bitter', 'Times New Roman', Times, serif;
         font-size: 1.7rem;
         margin-bottom: 30px;
+        padding: 0;
     }
     
-    .img-3 {
+    .strengths-img-3 {
         order: 4;
     }
 }
