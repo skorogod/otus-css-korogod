@@ -20,10 +20,16 @@
   <!--Header with navigation and logo-->
   <header class="page-header wrapper">
     <!--Navigation-->
-    <nav>
-      <button class="header-menu" type="button">
+    <nav class="header-nav">
+      <button class="header-nav-btn" type="button">
         <img src="img/Menu.png" alt="">
       </button>
+      <ul class="header-menu">
+        <li class=""><a class="" href="">Biography</a></li>
+        <li class=""><a class="" href="">Designers</a></li>
+        <li class=""><a class="" href="">Testimonials</a></li>
+        <li class=""><a class="" href="">Strong Points</a></li>
+      </ul>
       <div class="header-dropdown"></div>
     </nav>
   </header>
@@ -36,7 +42,7 @@
       </div>
     </section>
     <!--Biography Section-->
-    <section class="bio wrapper">
+    <section id="biography" class="bio wrapper">
       <h2 class="bio-header">Biography</h2>
       <div class="bio-img-container">
         <img class="bio-img" src="img/biography-img.jpg" alt="">
@@ -46,10 +52,10 @@
         <div class="bio-skills">
           <h4 class="bio-skills-header">Art Director</h4>
           <ul class="bio-skills-list">
-            <li class="list-item">Scenography</li>
-            <li class="list-item">Styling</li>
-            <li class="list-item">Creative Photography</li>
-            <li class="list-item">Design</li>
+            <li class="bio-list-item">Scenography</li>
+            <li class="bio-list-item">Styling</li>
+            <li class="bio-list-item">Creative Photography</li>
+            <li class="bio-list-item">Design</li>
           </ul>
         </div>
         <blockquote class="bio-quote">
@@ -59,7 +65,7 @@
       </article>
     </section>
     <!--Designers Section-->
-    <section class="designers wrapper">
+    <section id="designers" class="designers wrapper">
       <h2 class="section-name designers-header">Designers</h2>
       <ul class="list designers-list">
         <li class="designers-list-item sizer">
@@ -95,7 +101,7 @@
       </ul>
     </section>
     <!--Testiomonials Section-->
-    <section class="testimonials wrapper">
+    <section id="testimonials" class="testimonials wrapper">
       <h2 class="testimonials-title section-name">Testimonials</h2>
       <div class="testimonials-content">
         <div class="testimonials-navigation">
@@ -119,7 +125,7 @@
       </div>
     </section>
     <!--Strong points Section-->
-    <section class="strengths wrapper">
+    <section id="strong-points" class="strengths wrapper">
       <h2 class="strengths-header section-name">Strong points</h2>
       <img class="strengths-img-1" src="img/Strong-points-1.jpg" alt="table and chairs">
       <img class="strengths-img-2" src="img/Strong-points-2.jpg" alt="armchair and black rectangle">
@@ -127,25 +133,25 @@
           Strengths
       </h3>
       <ul class="strengths-list">
-        <li>Interiors</li>
-        <li>Outdoors</li>
-        <li>Portraits</li>
-        <li>Styling</li>
-        <li>Events</li>
-        <li>Architecture</li>
-        <li>Design</li>
-        <li>Celebrations</li>
-        <li>Artistic</li>
-        <li>Fashion</li>
-        <li>Nature</li>
-        <li>Creativity</li>
+        <li class="strengths-list-item">Interiors</li>
+        <li class="strengths-list-item">Outdoors</li>
+        <li class="strengths-list-item">Portraits</li>
+        <li class="strengths-list-item">Styling</li>
+        <li class="strengths-list-item">Events</li>
+        <li class="strengths-list-item">Architecture</li>
+        <li class="strengths-list-item">Design</li>
+        <li class="strengths-list-item">Celebrations</li>
+        <li class="strengths-list-item">Artistic</li>
+        <li class="strengths-list-item">Fashion</li>
+        <li class="strengths-list-item">Nature</li>
+        <li class="strengths-list-item">Creativity</li>
       </ul>  
       <img class="strengths-img-3" src="img/Strong-points-2.jpg" alt="armchair and black rectangle">
     </section>
   </main>
   <footer class="footer">
     <nav class="footer-nav">
-      <a href="#bio" class="footer-link link">B</a>
+      <a href="#biography" class="footer-link link">B</a>
       <a href="#designers" class="footer-link link">D</a>
       <a href="#testimonials" class="footer-link link">T</a>
       <a href="#strong-points" class="footer-link link">S</a>
