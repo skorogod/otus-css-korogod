@@ -145,11 +145,8 @@ html{
 
 
 .bio-info {
-    display: flex;
-    flex-flow: column;
     flex-basis: 475px;
     padding-left: 7.7%;
-    justify-content: center;
 }
 
 .bio-skills {
