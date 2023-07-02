@@ -89,6 +89,11 @@ html{
     animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
+.rotate {
+    writing-mode:vertical-rl;
+    transform: rotate(180deg);
+}
+
 .bio-title {
     line-height: 1.33em;
     max-width: 230px;
