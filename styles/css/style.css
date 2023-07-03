@@ -107,10 +107,18 @@ html {
     margin-top: 14px;
 }
 
-.bio-header, .section-name {
+.bio-header, .title {
     font-weight: 700;
     font-size: 1rem;
 }
+
+@media screen and (min-width: 1050px) {
+    .title_rotated {
+        transform: rotate(-90deg);
+        transform-origin: top right;
+    }
+}
+
 
 /*Biography Section*/
     /*Lists*/
@@ -169,6 +177,7 @@ html {
     list-style-type: none;
 }
 
+    
 .bio-list-item {
     display: inline-block;
 }
@@ -176,6 +185,7 @@ html {
 .bio-list-item::after {
     content: ' /';
 }
+
 
 .bio-list-item:last-child::after {
     content: '';
@@ -200,10 +210,9 @@ html {
     max-width: 1337px;
     min-height: 619px;
     position: relative;
-    overflow: auto;
 }
 
-.designers-header {
+.designers__title {
     position: absolute;
     display: inline-block;
     padding: 5px;
@@ -211,82 +220,118 @@ html {
 }
 
 @media screen and (min-width: 1050px) {
-    .designers-header {
+    .designers__title {
         top: -5px;
         left: 865px;
-        transform: rotate(-90deg);
-        transform-origin: top right;
         z-index: 1;
     }    
 }
 
-
-.designers-list {
-    position: absolute;
-    bottom: 0;
+.cards {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     gap: 30px;
+}
+
+.designers__cards {
+    position: absolute;
+    bottom: 0;
     overflow: auto;
 }
 
-.designers-list-item {
+.cards__item {
     flex-basis: 320px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
 }
 
-.designer-card {
+.card {
     flex-basis: 520px;
     display: flex;
     flex-direction: column;
 }
 
+.card__title {
+    margin-top: 1.2rem;
+    font-size: 0.8rem;
+}
+
+
 @media screen and (min-width: 1050px){
-    .sizer{
+    .cards__item_sized{
+        flex-basis: auto;
+    }
+
+    .cards__item_sized .card__title {
+        align-self: flex-end;
+    }
+    
+    .cards__item_sized .designer-card {
         flex-basis: auto;
     }
     
-    .sizer .designer-card {
-        flex-basis: auto;
-    }
-    
-    .sizer .card-img {
+    .cards__item_sized .card-img {
         height: 538px;
     }
     
-    .sizer .card-info {
+    .cards__item_sized .card__info, .cards__item_sized .card__title  {
         align-self: flex-end;
         min-width: 320px;
     }
 }
 
-
-.card-info {
-    align-self: flex-start;
-    font-size: 0.8rem;
-    margin-top: 1.2rem;
-}
-
-.card-img{
+.card__img{
+    order: -1;
     height: 100%;
     width: 100%;
     object-fit: cover;
     transition: transform 0.3s ease;
 }
 
-.card-img:hover {
+.card__img:hover {
     transform: scale(1.05);
     box-shadow: 3px 3px 5px grey;
 }
 
-.designers-list .designers-list-item:last-child .card-img:hover {
+.cards .cards__item:last-child .card__img:hover {
     transform: translateX(-5px) scale(1.03);
     transform-origin:  right;
     box-shadow: -3px 3px 5px grey;
 }
+
+.card__info {
+    align-self: flex-start;
+    font-size: 0.8rem;
+}
+
+.card__from::before {
+    content: "From/ ";
+    font-weight: 700;
+}
+
+.skills {
+    list-style: none;
+}
+
+.card__skills::before {
+    content: "Skills/ ";
+    font-weight: 700;
+}
+
+.skills__item {
+    display: inline-block;
+}
+
+.skills__item::after {
+    content: " / ";
+}
+
+.skills__item:last-child::after {
+    content: "";
+}
+
 
 /*Testimonials Section */
 .testimonials {
@@ -365,7 +410,7 @@ html {
 }
 
 .nav-link {
-    padding: 5px 10px;
+    padding: 5px 10px 5px 0;
     display: inline-block;
     transition: transform 0.4s, background-color 0.3s;
     border: 1px solid transparent;
@@ -519,6 +564,18 @@ html {
 
 
 @media screen and (max-width: 1170px) {
+    .bio-skills-list .list-item {
+        display: block;
+    }
+
+    .bio-list-item::after {
+        content: none;
+    }
+
+    .bio-list-item::before {
+        content: '-';
+    }
+
     .strengths {
         position: relative;
         margin-top: 160px;
@@ -554,8 +611,10 @@ html {
     .strengths-img-1, .strengths-img-2, .strengths-img-3 {
         grid-row: 3;
     }
-    
+
 }
+
+
 
 
 @media screen and (max-width: 1049px) {
@@ -581,28 +640,12 @@ html {
         justify-content: flex-start;
     }
 
-    .bio-skills-list {
-        list-style-type: disc;
-    }
-
-    .bio-skills-list .list-item {
-        display: block;
-    }
-
-    .bio-list-item::after {
-        content: none;
-    }
-
-    .bio-list-item::before {
-        content: '-';
-    }
-
     .designers {
         min-height: 573px;
         margin-top: 160px;
     }
 
-    .designers-header {
+    .designers__title {
         position: static;
         padding: 0;
         margin-bottom: 32px;
@@ -661,7 +704,7 @@ html {
         font-size: 1.3rem;
     }
 
-    .designers-list {
+    .designers__skills {
         gap: 20px;
     }
 }
