@@ -9,6 +9,10 @@
     padding: 0;
 }
 
+.row > * {
+    padding: 0;
+}
+
 body {
     padding: 0 1rem;
     font-family: 'Roboto',Arial, sans-serif;
@@ -90,15 +94,31 @@ html {
     animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
-.rotate {
-    writing-mode:vertical-rl;
-    transform: rotate(180deg);
+@media screen and (min-width: 992px) {
+    .rotate {
+        writing-mode:vertical-rl;
+        transform: rotate(180deg);
+    }
 }
+    
 
 .bio-title {
     line-height: 1.33em;
-    max-width: 230px;
     text-align: start;
+}
+
+@media screen and (min-width: 768px){
+    .bio-title {
+        max-width: 237px;
+    }
+    .bio-quote {
+        max-width: 449px;
+    }
+}
+    
+
+.bio-info > * {
+    padding: 0;
 }
 
 .hero-description {
@@ -128,34 +148,8 @@ html {
     display: flex;
 }
 
-.bio-header {
-    align-self: flex-start;
-}
-
-@media screen and (min-width: 1050px) {
-    .bio-header {
-        writing-mode: vertical-rl;
-        transform:rotate(-180deg);
-        margin-left: 2.8% ;
-    }    
-}
-
-
-.bio-img-container {
-    order: -1;
-    max-width: 553px;
-}
-
 .bio-img {
-    height: 100%;
-    width: 100%;
     object-fit: cover;
-}
-
-
-.bio-info {
-    flex-basis: 475px;
-    padding-left: 3.7%;
 }
 
 .bio-skills {
@@ -200,7 +194,6 @@ html {
     margin-top: 0.85rem;
     font-family: 'Bitter', 'Times New Roman', Times, serif;
     font-size: 1.3rem;
-    max-width: 449px;
 }
 
 
@@ -623,23 +616,6 @@ html {
         
     }
 
-    .bio-header {
-        order: -1;
-        flex-basis: 100%;
-        margin-bottom: 32px;
-    }
-
-    .bio-img-container {
-        order: 0;
-        flex-basis: 50%;
-    }
-
-    .bio-info {
-        order: 0;
-        flex-basis: 45%;
-        justify-content: flex-start;
-    }
-
     .designers {
         min-height: 573px;
         margin-top: 160px;
@@ -709,12 +685,16 @@ html {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
+    .row > * {
+        padding: 0;
+    }
+
     body {
         padding: 0;
     }
 
-    .bio-title, .strengths-list-title {
+    .strengths-list-title {
         font-size: 3.2rem;
     }
 
@@ -745,8 +725,64 @@ html {
         padding: 98.5px 7.1% 0;
     }
 
-    .bio, .testimonials {
+    .testimonials {
         padding: 0 1rem;
+    }
+
+    .bio {
+        padding: 0;
+        flex-direction: column;
+        min-height: 952px;
+    }
+
+    .bio-header {
+        padding-right: 1rem;
+    }
+    
+    .bio-title, .strengths-list-title {
+        font-size: 3.2rem;
+    }
+    
+    .bio-img-container {
+        height: 500px;
+        margin-top: 35.5px;
+    }
+    
+    .bio-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    
+    .bio-info {
+        margin: 0;
+        padding: 0 1rem 0 0.9rem;
+        position: relative;
+        top: -30px;
+    }
+    
+    .bio-title::before {
+        content: '-';
+    }
+    
+    .bio-title {
+        order: 1;
+        max-width: 100%;
+        margin-top: 41px;
+    }
+    
+    .bio-skills {margin-top: 0;}
+    
+    
+    .bio-quote::before {
+        content: none;
+    }
+    
+    .bio-quote {
+        margin-top: 57px;
+        font-weight: 300;
+        font-size: 1.5rem;
+        max-width: 100%;
     }
 
     .designers, .strengths {
@@ -801,15 +837,8 @@ html {
  
 }
 
+
 @media screen and (max-width: 575px) {
-    .bio {
-        padding: 0;
-    }
-
-    .bio-title, .strengths-list-title {
-        font-size: 3.2rem;
-    }
-
     .hero-title {
         font-size: 3.5rem;
         font-weight: 400;
@@ -837,60 +866,9 @@ html {
         padding: 21.9% 7.1%;
     }
 
-    .bio {
-        flex-direction: column;
-        min-height: 952px;
-    }
-
-    .bio-header {
-        transform: none;
-        writing-mode:unset;
-        align-self: flex-end;
-        padding-right: 1rem;
-    }
-
     .bio-img-container {
-        order: 2;
         height: 400px;
-        margin-top: 35.5px;
     }
-    
-    .bio-img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .bio-info {
-        margin: 0;
-        padding: 0 1rem 0 0.9rem;
-        position: relative;
-        top: -50px;
-    }
-
-    .bio-title::before {
-        content: '-';
-    }
-
-    .bio-title {
-        order: 1;
-        max-width: 100%;
-        margin-top: 41px;
-    }
-
-    .bio-skills {margin-top: 0;}
-
-    
-    .bio-quote::before {
-        content: none;
-    }
-
-    .bio-quote {
-        margin-top: 57px;
-        font-weight: 300;
-        font-size: 1.5rem;
-    }
- 
     
 /*Designers section*/
     .designers {
