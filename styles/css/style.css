@@ -11,7 +11,7 @@
 
 body {
     padding: 0 1rem;
-    line-height: inherit !important;
+    line-height: inherit;
 }
 
 html{
@@ -20,7 +20,7 @@ html{
     font-weight:normal;
     font-style: normal;
     color: #000000;
-    line-height: 1.2;
+    line-height: 1.2 !important;
 }
 
 .header-nav-btn {
