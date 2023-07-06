@@ -201,74 +201,21 @@ html{
 
 
 /*Designers Section*/
-.designers {
-    margin-top: 169px;
-    max-width: 1337px;
-    min-height: 619px;
-    position: relative;
-}
-
-.designers__title {
-    position: absolute;
-    display: inline-block;
-    padding: 5px;
-    z-index: 2;
-}
-
-@media screen and (min-width: 1050px) {
-    .designers__title {
-        top: -5px;
-        left: 865px;
-        z-index: 1;
-    }    
-}
-
-.cards {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 30px;
-}
-
-.designers__cards {
-    position: absolute;
-    bottom: 0;
-    overflow: auto;
-}
-
-.cards__item {
-    flex-basis: 320px;
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.card {
-    flex-basis: 520px;
-    display: flex;
-    flex-direction: column;
-}
-
-.card__title {
-    margin-top: 1.2rem;
-    font-size: 0.8rem;
-}
-
-
-@media screen and (min-width: 1050px){
+@media screen and (min-width: 1049.1px){
     .cards__item_sized{
-        flex-basis: auto;
+        flex-basis: auto !important;
     }
 
     .cards__item_sized .card__title {
         align-self: flex-end;
     }
     
-    .cards__item_sized .designer-card {
+    .cards__item_sized .card {
         flex-basis: auto;
+        max-height: unset;
     }
     
-    .cards__item_sized .card-img {
+    .cards__item_sized .card_img {
         height: 538px;
     }
     
@@ -276,56 +223,6 @@ html{
         align-self: flex-end;
         min-width: 320px;
     }
-}
-
-.card__img{
-    order: -1;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.card__img:hover {
-    transform: scale(1.05);
-    box-shadow: 3px 3px 5px grey;
-}
-
-.cards .cards__item:last-child .card__img:hover {
-    transform: translateX(-5px) scale(1.03);
-    transform-origin:  right;
-    box-shadow: -3px 3px 5px grey;
-}
-
-.card__info {
-    align-self: flex-start;
-    font-size: 0.8rem;
-}
-
-.card__from::before {
-    content: "From/ ";
-    font-weight: 700;
-}
-
-.skills {
-    list-style: none;
-}
-
-.card__skills::before {
-    content: "Skills/ ";
-    font-weight: 700;
-}
-
-.skills__item {
-    display: inline-block;
-}
-
-.skills__item::after {
-    content: " / ";
-}
-
-.skills__item:last-child::after {
-    content: "";
 }
 
 
@@ -613,7 +510,7 @@ html{
 
 
 
-@media screen and (max-width: 1049px) {
+@media screen and (max-width: 1048.9px) {
     .bio {
         flex-wrap: wrap;
         
@@ -634,17 +531,6 @@ html{
         order: 0;
         flex-basis: 45%;
         justify-content: flex-start;
-    }
-
-    .designers {
-        min-height: 573px;
-        margin-top: 160px;
-    }
-
-    .designers__title {
-        position: static;
-        padding: 0;
-        margin-bottom: 32px;
     }
 
     .testimonials {
@@ -745,7 +631,7 @@ html{
         padding: 0 1rem;
     }
 
-    .designers, .strengths {
+    .strengths {
         padding-left: 1rem;
     }
 
@@ -785,6 +671,7 @@ html{
         grid-row: 3;
         height: 100%;
         object-fit: cover;
+        max-width: unset;
     }
 
     .footer {
@@ -849,9 +736,11 @@ html{
         order: 2;
         height: 400px;
         margin-top: 35.5px;
+        max-width: 100%;
     }
     
     .bio-img {
+        display: inline-block;
         height: 100%;
         width: 100%;
         object-fit: cover;
@@ -890,7 +779,6 @@ html{
     
 /*Designers section*/
     .designers {
-        min-height: 573px;
         margin-top: 80px;
         margin-bottom: 80px;
         padding-left: 0.9rem;
