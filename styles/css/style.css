@@ -1,12 +1,19 @@
 /*Basics*/
 @import url("fonts.css");
 
+
+
 * {
     -webkit-box-sizing: border-box;
         -ms-box-sizimg: border-box;
             box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+ul, h2, h3, p {
+    padding-left: 0;
+    margin-bottom: 0;
 }
 
 .row > * {
@@ -16,6 +23,7 @@
 body {
     padding: 0 1rem;
     font-family: 'Roboto',Arial, sans-serif;
+    line-height: inherit;
 }
 
 html {
@@ -112,7 +120,7 @@ html {
         max-width: 237px;
     }
     .bio-quote {
-        max-width: 449px;
+        max-width: 370px;
     }
 }
     
@@ -206,6 +214,7 @@ html {
 }
 
 .designers__title {
+    margin-bottom: 0;
     position: absolute;
     display: inline-block;
     padding: 5px;
@@ -214,7 +223,7 @@ html {
 
 @media screen and (min-width: 1050px) {
     .designers__title {
-        top: -5px;
+        top: -25px;
         left: 865px;
         z-index: 1;
     }    
@@ -240,7 +249,7 @@ html {
     flex-direction: column;
 }
 
-.card {
+._card {
     flex-basis: 520px;
     display: flex;
     flex-direction: column;
@@ -261,11 +270,11 @@ html {
         align-self: flex-end;
     }
     
-    .cards__item_sized .designer-card {
+    .cards__item_sized .card {
         flex-basis: auto;
     }
     
-    .cards__item_sized .card-img {
+    .cards__item_sized .card__img {
         height: 538px;
     }
     
@@ -413,6 +422,7 @@ html {
 
 .nav-link:hover {
     transform: translate(-5px, -10px) scale(1.06);
+    color: unset;
 }
 
 .nav-link:focus {
