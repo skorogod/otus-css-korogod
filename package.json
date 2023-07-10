@@ -2,9 +2,12 @@
   "name": "otus-css-korogod",
   "version": "1.0.0",
   "description": "Otus Css-HTML project \"Mod Studio\"",
-  "main": "index.js",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-dev": "webpack -c webpack.config.js",
+    "start-dev": "webpack serve -c webpack.config.js",
+    "build-prod": "webpack -c webpack.config.prod.js",
+    "start-prod": "webpack serve -c webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
@@ -17,8 +20,20 @@
   },
   "homepage": "https://github.com/skorogod/otus-css-korogod#readme",
   "devDependencies": {
+    "@babel/core": "^7.22.8",
+    "@babel/preset-env": "^7.22.7",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.8.1",
+    "html-loader": "^4.2.0",
+    "html-webpack-plugin": "^5.5.3",
     "http-server": "^14.1.1",
-    "prettier": "^3.0.0"
+    "mini-css-extract-plugin": "^2.7.6",
+    "prettier": "^3.0.0",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.88.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
     "lodash": "^4.17.21"

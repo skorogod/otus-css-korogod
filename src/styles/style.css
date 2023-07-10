@@ -1,6 +1,5 @@
-/*Basics*/
-@import url("fonts.css");
 
+/*Basics*/
 * {
     -webkit-box-sizing: border-box;
         -ms-box-sizimg: border-box;
@@ -8,7 +7,6 @@
     margin: 0;
     padding: 0;
 }
-
 
 
 body {
@@ -56,7 +54,7 @@ html{
     position: absolute;
     left: 10px;
     top: 35px;
-    z-index: 1;
+    z-index: -1;
     background-color: rgba(238, 207, 164, 0.4);
     border-radius: 5px;
     font-family: 'Bitter';
@@ -88,10 +86,12 @@ html{
 }
 
 .header-menu:hover {
+    z-index: 10;
     opacity: 100%;
 }
 
 .header-nav-btn:hover + .header-menu {
+    z-index: 10;
     opacity: 100%;
 }
 
@@ -112,7 +112,7 @@ html{
     min-height: 630px;
     position: relative;
     text-align: center;
-    background-image: url("../../img/logo-background.jpg");
+    background-image: url("../assets/logo-background.jpg");
     background-size: cover;
     background-position: left;
 }
@@ -239,7 +239,7 @@ html{
 }
 
 .bio-quote::before{
-    content: url("../../img/Biography-rectangle.svg");
+    content: url("../assets/Biography-rectangle.svg");
     display: block;
 }
 
@@ -401,7 +401,7 @@ html{
 .testimonials-navigation {
     position: relative;
     padding-left: 75px;
-    background-image: url("../../img/Testimonials-1.jpg");
+    background-image: url("../assets/Testimonials-1.jpg");
     background-size: cover;
     background-origin: content-box;
     background-repeat: no-repeat;
