@@ -1,0 +1,26 @@
+{
+  "name": "otus-css-korogod",
+  "version": "1.0.0",
+  "description": "Otus Css-HTML project \"Mod Studio\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skorogod/otus-css-korogod.git"
+  },
+  "author": "Sergey Korogod",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skorogod/otus-css-korogod/issues"
+  },
+  "homepage": "https://github.com/skorogod/otus-css-korogod#readme",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "prettier": "^3.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}

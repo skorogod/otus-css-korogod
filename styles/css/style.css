@@ -9,11 +9,14 @@
     padding: 0;
 }
 
+
+
 body {
     padding: 0 1rem;
 }
 
 html{
+    scroll-behavior: smooth;
     font-family: 'Roboto',Arial, sans-serif;
     font-size: 20px;
     font-weight:normal;
@@ -22,12 +25,18 @@ html{
     line-height: 1.2;
 }
 
+.header-nav {
+    position: absolute;
+}
+
 .header-nav-btn {
     outline: none;
     border: 1px solid transparent;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0);
     padding: 10px 10px 5px;
+    z-index: 0;
+    transition: background-color 0.3s ease;
 }
 
 .header-nav-btn:focus {
@@ -41,7 +50,49 @@ html{
 }
 
 .header-menu {
-    display: none;
+    min-width: 200px;
+    display: inline-block;
+    opacity: 0;
+    position: absolute;
+    left: 10px;
+    top: 35px;
+    z-index: 1;
+    background-color: rgba(238, 207, 164, 0.4);
+    border-radius: 5px;
+    font-family: 'Bitter';
+    transition: opacity 0.3s ease;
+}
+
+.menu-item {
+    padding: 10px  20px;
+    letter-spacing: 2px;
+    word-spacing: 6px;
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #e0b692;
+    transform: scale(1.05);
+}
+
+.menu-item:nth-child(1):hover {
+    background-color:  #e2d4c8;
+}
+
+.menu-item:nth-child(2):hover {
+    background-color:  #e6c9b4;
+}
+
+.menu-item:nth-child(3):hover {
+    background-color:  #e2bd9e;
+}
+
+.header-menu:hover {
+    opacity: 100%;
+}
+
+.header-nav-btn:hover + .header-menu {
+    opacity: 100%;
 }
 
 .wrapper {
