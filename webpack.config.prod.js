@@ -16,14 +16,14 @@ module.exports = {
             filename: 'index.html',
         }),
         new MiniCss({
-            filename: "style.css"
+            filename: "style.css",
         })
     ],
     module: {
         rules: [
             {
                 test: /\.css$/,
-                use: ['style-loader', "css-loader"],
+                use: [MiniCss.loader, "css-loader", "sass-loader"],
             },
             {
                 test: /\.html$/,

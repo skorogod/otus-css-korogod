@@ -4,10 +4,9 @@
   "description": "Otus Css-HTML project \"Mod Studio\"",
   "private": true,
   "scripts": {
-    "build-dev": "webpack -c webpack.config.js",
     "start-dev": "webpack serve -c webpack.config.js",
-    "build-prod": "webpack -c webpack.config.prod.js",
-    "start-prod": "webpack serve -c webpack.config.prod.js"
+    "build-dev": "webpack -c webpack.config.js",
+    "build-prod": "webpack -c webpack.config.prod.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +28,7 @@
     "http-server": "^14.1.1",
     "mini-css-extract-plugin": "^2.7.6",
     "prettier": "^3.0.0",
+    "sass": "^1.63.6",
     "sass-loader": "^13.3.2",
     "style-loader": "^3.3.3",
     "webpack": "^5.88.1",
