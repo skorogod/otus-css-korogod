@@ -56,7 +56,7 @@ html{
     position: absolute;
     left: 10px;
     top: 35px;
-    z-index: 1;
+    z-index: -1;
     background-color: rgba(238, 207, 164, 0.4);
     border-radius: 5px;
     font-family: 'Bitter';
@@ -87,11 +87,8 @@ html{
     background-color:  #e2bd9e;
 }
 
-.header-menu:hover {
-    opacity: 100%;
-}
-
-.header-nav-btn:hover + .header-menu {
+.header-nav-btn:hover + .header-menu, .header-menu:hover {
+    z-index: 10;
     opacity: 100%;
 }
 
