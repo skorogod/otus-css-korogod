@@ -24,7 +24,21 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: [MiniCss.loader, "css-loader", "sass-loader"],
+                use: [MiniCss.loader, "css-loader", "sass-loader",
+                {
+                  loader: "postcss-loader",
+                  options: {
+                    postcssOptions: {
+                      plugins: [
+                        [
+                          "autoprefixer",
+                          {
+                            // Options
+                          },
+                        ],
+                      ],
+                    },
+                  },},],
             },
             {
                 test: /\.html$/,
@@ -43,11 +57,8 @@ module.exports = {
                 }
             },
             {
-                test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-                type: 'asset/resource',
-                generator:  {
-                    filename: 'images/[name]-[contenthash][ext]',
-                }
+              test: /\.(jpe?g|png|gif|svg)$/i,
+              type: "asset",
             },
             {
                 test: /\.(woff(2)?|eot|ttf|otf|)$/,
@@ -66,46 +77,29 @@ module.exports = {
         ]
     },
     optimization: {
-        minimizer: [
-          "...",
-          new ImageMinimizerPlugin({
-            minimizer: {
-              implementation: ImageMinimizerPlugin.imageminMinify,
-              options: {
-                // Lossless optimization with custom option
-                // Feel free to experiment with options for better result for you
-                plugins: [
-                  ["gifsicle", { interlaced: true }],
-                  ["jpegtran", { progressive: true }],
-                  ["optipng", { optimizationLevel: 5 }],
-                  // Svgo configuration here https://github.com/svg/svgo#configuration
-                  [
-                    "svgo",
-                    {
-                      plugins: [
-                        {
-                          name: "preset-default",
-                          params: {
-                            overrides: {
-                              removeViewBox: false,
-                              addAttributesToSVGElement: {
-                                params: {
-                                  attributes: [
-                                    { xmlns: "http://www.w3.org/2000/svg" },
-                                  ],
-                                },
-                              },
-                            },
-                          },
-                        },
-                      ],
-                    },
-                  ],
-                ],
+      minimizer: [
+        new ImageMinimizerPlugin({
+          minimizer: {
+            implementation: ImageMinimizerPlugin.squooshMinify,
+            options: {
+              encodeOptions: {
+                mozjpeg: {
+                  // That setting might be close to lossless, but it’s not guaranteed
+                  // https://github.com/GoogleChromeLabs/squoosh/issues/85
+                  quality: 65,
+                },
+                webp: {
+                  lossless: 1,
+                },
+                avif: {
+                  // https://github.com/GoogleChromeLabs/squoosh/blob/dev/codecs/avif/enc/README.md
+                  cqLevel: 0,
+                },
               },
             },
-          }),
-        ],
+          },
+        }),
+      ],
     },
     devServer: {
         compress: false,
