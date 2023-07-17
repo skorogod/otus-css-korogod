@@ -1,6 +1,5 @@
-/*Basics*/
-@import url("fonts.css");
 
+/*Basics*/
 * {
     -webkit-box-sizing: border-box;
         -ms-box-sizimg: border-box;
@@ -8,7 +7,6 @@
     margin: 0;
     padding: 0;
 }
-
 
 
 body {
@@ -109,7 +107,7 @@ html{
     min-height: 630px;
     position: relative;
     text-align: center;
-    background-image: url("../../img/logo-background.jpg");
+    background-image: url("../assets/logo-background.jpg");
     background-size: cover;
     background-position: left;
 }
@@ -236,7 +234,7 @@ html{
 }
 
 .bio-quote::before{
-    content: url("../../img/Biography-rectangle.svg");
+    content: url("../assets/Biography-rectangle.svg");
     display: block;
 }
 
@@ -398,7 +396,7 @@ html{
 .testimonials-navigation {
     position: relative;
     padding-left: 75px;
-    background-image: url("../../img/Testimonials-1.jpg");
+    background-image: url("../assets/Testimonials-1.jpg");
     background-size: cover;
     background-origin: content-box;
     background-repeat: no-repeat;
@@ -753,7 +751,7 @@ html{
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.9px) {
     body {
         padding: 0;
     }
@@ -845,7 +843,7 @@ html{
  
 }
 
-@media screen and (max-width: 575px) {
+@media screen and (max-width: 575.9px) {
     .bio {
         padding: 0;
     }
