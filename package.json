@@ -31,7 +31,6 @@
     "html-webpack-plugin": "^5.5.3",
     "http-server": "^14.1.1",
     "image-minimizer-webpack-plugin": "^3.8.3",
-    "image-webpack-loader": "^4.4.0",
     "imagemin": "^8.0.1",
     "imagemin-gifsicle": "^5.2.0",
     "imagemin-jpegtran": "^5.0.2",
