@@ -17,7 +17,7 @@
 
 #### Mobile-версия страницы:
 - Performance:
-[View Performance](LightHouseReport/mobile/performance.jpg)
+[View Performance](LightHouseReport/mobile/performance.JPG)
 - Accessebility:
 [View Accessebility](LightHouseReport/mobile/accessibility.jpg)
 - Best Practice:
