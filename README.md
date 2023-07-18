@@ -19,8 +19,8 @@
 - Performance:
 [View Performance](LightHouseReport/mobile/performance.JPG)
 - Accessebility:
-[View Accessebility](LightHouseReport/mobile/accessibility.jpg)
+[View Accessebility](LightHouseReport/mobile/accessibility.JPG)
 - Best Practice:
-[View Best Practice](LightHouseReport/mobile/bestpractice.jpg)
+[View Best Practice](LightHouseReport/mobile/bestpractice.JPG)
 - SEO:
-[View SEO](LightHouseReport/mobile/SEO.jpg)
+[View SEO](LightHouseReport/mobile/SEO.JPG)
